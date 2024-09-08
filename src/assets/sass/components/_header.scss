@@ -1,0 +1,112 @@
+// Header Code
+.navbar {
+    .navbar-brand {
+        font-size: 28px;
+        font-style: italic;
+    }
+
+    .navbar-toggler {
+        border: none;
+        margin-right: 10px;
+        padding-bottom: 0;
+        .navbar-toggler-icon {
+            width: 2em;
+            height: 2em;
+        }
+    }
+
+    .navbar-collapse {
+        .nav-link {
+            padding: 0 16px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            color: #000;
+
+            justify-content: center;
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:after {
+                content: '';
+                background: $secondary-color;
+                position: absolute;
+                height: 3px;
+                border-radius: 4px;
+                width: 0;
+                bottom: -10px;
+                transition: width .3s;
+            }
+        }
+    }
+
+    .web-menu {
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+
+        .close-button {
+            display: none;
+        }
+    }
+
+    .mobile-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background: #fff;
+        width: 100%;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+
+        .navbar-nav {
+            .nav-link {
+                font-size: 40px;
+                margin: 30px 0;
+            }
+        }
+
+        .close-button {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            background: transparent;
+            border: none;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+
+    .navbar-text {
+        img {
+            width: 34px;
+        }
+
+        position: relative;
+
+        span {
+            position: absolute;
+            right: -3px;
+            top: 5px;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            color: #fff;
+            background-color: #f57537;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
